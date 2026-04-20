@@ -15,7 +15,7 @@ public class Simluator {
 
     public record Square(int landingCount, String name, boolean isJail) {}
 
-    public static Square[] simulate(JailStrategy jailStrategy) throws IOException {
+    public static Square[] simulate(int turns, JailStrategy jailStrategy) throws IOException {
         var board = newBoard();
         System.out.println(Arrays.toString(board));
         return board;
@@ -43,7 +43,7 @@ public class Simluator {
 
     static void main() {
         try {
-            simulate(JailStrategy.ImmediateExit);
+            simulate(100, JailStrategy.ImmediateExit);
         } catch (IOException e) {
             System.out.println("Board file not found");
         }
