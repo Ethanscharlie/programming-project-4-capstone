@@ -47,8 +47,8 @@
 
 | Task                                                        | Owner     | Due Date |
 |:------------------------------------------------------------|:----------|:---------|
-| Initialize /docs and Proj_4_plan.md                         | Alejandro | April 20 |
-| Implement Board and CardDeck parsing from board.txt         | Ethan     | April 24 |
+| Initialize /docs and Proj_4_plan.md                         | Alejandro | **DONE** |
+| Implement Board and CardDeck parsing from board.txt         | Ethan     | **DONE** |
 | Implement `Simulator` and `JailStrategy` enum logic         | Ethan     | April 26 |
 | Implement TurnEngine and "3 Doubles = Jail" logic           | Ben       | April 26 |
 | Finalize UML (including `Square` and `Main` interactions)   | Ethan     | April 26 |
@@ -62,11 +62,12 @@
 ## 6․ Verification Plan
 
 To ensure our program works‚ we will do:
-* Unit test "Go To Jail" and Chance card movement redirection
-* Verify the `Square` class accurately tracks `landingCount`
-* Compare `ImmediateExit` vs `TryForDoubles` results to identify convergence at $n=1M$
-* Validate top-landed squares (e.g. Illinois Avenue) against known Monopoly stats
-* Ensure `Simulator.simulate()` returns the correct `array[Square]` for data processing
+* **Status:** Board and CardDeck parsing verified via `Simulator reading from file` commit.
+* Unit test "Go To Jail" and Chance card movement redirection.
+* Verify the `Square` class accurately tracks `landingCount`.
+* Compare `ImmediateExit` vs `TryForDoubles` results to identify convergence at $n=1M$.
+* Validate top-landed squares (e.g. Illinois Avenue) against known Monopoly stats.
+* Ensure `Simulator.simulate()` returns the correct `array[Square]` for data processing.
 
 ## 7․ Risks and Plan to Handle Them
 
