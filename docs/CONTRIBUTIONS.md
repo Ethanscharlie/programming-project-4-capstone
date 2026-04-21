@@ -15,22 +15,22 @@ As per the project requirements, team roles were established and documented in o
 
 ### Alejandro Pasillas (GitHub: apasillas07)
 **Role:** Communications Lead
-* **Responsibilities:** Managed the `/docs` folder, authored the formal Project Plan, and initialized the team contributions log based on team coordination via Discord.
+* **Responsibilities:** Documentation lifecycle management, repository organization, and maintaining project alignment with capstone requirements.
 * **Evidence Pointers:**
-    * **Commit (Apr 20):** `Create proj_4_plan.md` (Initialization of project roadmap and documentation folder).
-    * **Artifacts:** `Proj_4_plan.md` and foundational `CONTRIBUTIONS.md`.
+    * **Commit [cdbf911](https://github.com/Ethanscharlie/programming-project-4-capstone/commit/cdbf911):** `Update proj_4_plan.md` (Synchronized project milestones with latest implementation progress).
+    * **Artifacts:** Maintained `Proj_4_plan.md` and `CONTRIBUTIONS.md` to reflect real-time team velocity.
 
 ### Ethan Hadley (GitHub: Ethanscharlie)
 **Role:** Implementation Lead
-* **Responsibilities:** Initialized the repository structure and Maven configuration. Implemented board configuration parsing and refined simulation method signatures.
+* **Responsibilities:** Lead developer for core simulation logic, file parsing, and movement algorithms.
 * **Evidence Pointers:**
-    * **Commit (Apr 20):** `Initial Commit`, `Simulator reading from file`, and `Fixed up board.txt` (Core infrastructure and configuration artifacts).
-    * **Commit (Apr 20):** `Added turns argument to simulate` (Enhanced simulation functionality for data collection).
-    * **Artifacts:** [board.txt](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/src/main/resources/board.txt) and `Simulator.java` framework.
+    * **Commit [f2d59c1](https://github.com/Ethanscharlie/programming-project-4-capstone/commit/f2d59c1):** `Good part of simulation has been finished` (Significant progress on core movement logic and turn execution).
+    * **Commit [dfc172a](https://github.com/Ethanscharlie/programming-project-4-capstone/commit/dfc172a):** `Merge remote-tracking branch 'origin/main'` (Ensured codebase remained synced with documentation updates).
+    * **Artifacts:** Preliminary simulation engine and board state management.
 
 ### Ben Paul (GitHub: Ben1078)
 **Role:** Verification Lead
-* **Responsibilities:** Collaborated on the verification strategy for movement and dice logic. Assisted in defining technical milestones and the "Definition of Done" for simulation batching.
+* **Responsibilities:** Collaborated on verifying movement logic and ensuring the simulation engine supports the required batch execution parameters.
 * **Evidence Pointers:**
-    * **Discord Coordination:** Finalized task distribution for Turn Engine logic and "3 Doubles" validation.
-    * **Artifacts:** Technical requirements and verification plan sections in `Proj_4_plan.md`.
+    * **Discord Coordination:** Reviewed `f2d59c1` logic to prepare for independent verification of the "3 Doubles" jail rule.
+    * **Artifacts:** Verification Plan updates in the master Project Plan.
