@@ -1,75 +1,85 @@
 # Project Plan: Monopoly Movement Simulator
 
+**Plan Last Updated:** April 30, 2026
+
 ## 1․ Project Information
 
-* **Course / Term:** CS 2430-502 - Spring 2026
-* **Project:** Programming Project 4 - Capstone (PLO-CS-6)
-* **Team Name:** AEB
-* **Start Date:** April 20‚ 2026
-* **Due Date:** May 3‚ 2026
-* **Checkpoint Date:** April 26‚ 2026
+  * **Course / Term:** CS 2430-502 - Spring 2026
+  * **Project:** Programming Project 4 - Capstone (PLO-CS-6)
+  * **Team Name:** AEB
+  * **Start Date:** April 20, 2026
+  * **Due Date:** May 3, 2026
+  * **Checkpoint Date:** April 26, 2026
 
 ## 2․ Team members and roles
 
 ### Alejandro Pasillas (Communications Lead)
-* Organizes and maintains the /docs folder
-* Leads the final 3–6 page professional analysis report
-* Coordinates the team screencast and final submission
-* Manages weekly status reports and repository organization
+
+  * Organizes and maintains the /docs folder
+  * Leads the final 3–6 page professional analysis report
+  * Coordinates the team screencast and final submission
+  * Manages weekly status reports and repository organization
 
 ### Ethan Hadley (Implementation Lead)
-* Primary architect for the core simulation engine
-* Implements Board parsing‚ CardDeck logic‚ and Jail strategies
-* Ensures code adheres to the established UML design
+
+  * Primary architect for the core simulation engine
+  * Implements Board parsing, CardDeck logic, and Jail strategies
+  * Ensures code adheres to the established UML design
 
 ### Ben Paul (Verification Lead)
-* Designs the verification plan for movement logic and dice rolls
-* Manages batch simulation runner for $n=1,000,000$ turns
-* Validates output consistency across 80 total datasets
 
+  * Designs the verification plan for movement logic and dice rolls
+  * Manages batch simulation runner for $n=1,000,000$ turns
+  * Validates output consistency across 80 total datasets
 
 ## 3․ Repository Setup
-* **Platform:** GitHub
-* **Repository:** https://github.com/Ethanscharlie/programming-project-4-capstone
-* **Instructor added to repository?** Yes
+
+  * **Platform:** GitHub
+  * **Repository:** [programming-project-4-capstone](https://github.com/Ethanscharlie/programming-project-4-capstone)
+  * **Instructor added to repository?** Yes
 
 ## 4․ Milestones and Timeline
 
-| Milestone            | Target Date | Description                                                   |
-|:---------------------|:------------|:--------------------------------------------------------------|
-| Repository Setup     | April 20    | Repo documentation initialized with Plan and Contributions    |
-| Checkpoint           | April 26    | /docs folder updated with UML and technical design artifacts  |
-| Core Engine Complete | April 28    | All movement logic and Jail Strategies A & B implemented      |
-| Data Collection      | April 30    | Final simulations run at $n=1M$ with exported datasets        |
-| Final Submission     | May 3       | All materials finalized and submitted via Canvas              |
+| Milestone            | Target Date | Description                                                   | Status |
+|:---------------------|:------------|:--------------------------------------------------------------|:-------|
+| Repository Setup     | April 20    | Repo documentation initialized with Plan and Contributions    | **DONE** |
+| Checkpoint           | April 26    | /docs folder updated with UML and technical design artifacts  | **DONE** |
+| Core Engine Complete | April 28    | All movement logic and Jail Strategies A & B implemented      | **DONE** |
+| Data Collection      | April 30    | Final simulations run at $n=1M$ with exported datasets        | **IN PROGRESS** |
+| Final Submission     | May 3       | All materials finalized and submitted via Canvas              | UPCOMING |
 
 ## 5․ Task List
 
-| Task                                                        | Owner     | Due Date |
-|:------------------------------------------------------------|:----------|:---------|
-| Initialize /docs and Proj_4_plan.md                         | Alejandro | **DONE** |
-| Implement Board and CardDeck parsing from board.txt         | Ethan     | **DONE** |
-| Implement `Simulator` and `JailStrategy` enum logic         | Ethan     | April 26 |
-| Implement TurnEngine and "3 Doubles = Jail" logic           | Ben       | April 26 |
-| Finalize UML (including `Square` and `Main` interactions)   | Ethan     | April 26 |
-| Code Strategy A (ImmediateExit) and B (TryForDoubles)       | Ethan     | April 27 |
-| Build Simulation Runner for batch execution                 | Ben       | April 28 |
-| Perform Comparative Data Analysis of strategies             | Alejandro | May 1    |
-| Write 3–6 Page Formal Analysis Report                       | Alejandro | May 2    |
-| Record team screencast video                                | Team      | May 2    |
-| Package .zip and submit final files                         | Alejandro | May 3    |
+| Task | Owner | Due Date | Status / Evidence |
+|:---|:---|:---|:---|
+| Initialize /docs and Proj\_4\_plan.md | Alejandro | April 20 | **DONE** - [Commit cdbf911](https://www.google.com/search?q=https://github.com/Ethanscharlie/programming-project-4-capstone/commit/cdbf911) |
+| Implement Board and CardDeck parsing from board.txt | Ethan | April 24 | **DONE** - [Commit a083f21](https://www.google.com/search?q=https://github.com/Ethanscharlie/programming-project-4-capstone/commit/a083f21) |
+| Implement `Simulator` and `JailStrategy` enum logic | Ethan | April 26 | **DONE** - [Commit ffa24f4](https://www.google.com/search?q=https://github.com/Ethanscharlie/programming-project-4-capstone/commit/ffa24f4) |
+| Finalize Checkpoint Artifacts (UML/Design) | Ethan | April 26 | **DONE** - [Commit f2d59c1](https://www.google.com/search?q=https://github.com/Ethanscharlie/programming-project-4-capstone/commit/f2d59c1) |
+| Code Strategy A (ImmediateExit) and B (TryForDoubles) | Ethan | April 27 | **DONE** - [Commit dfc172a](https://www.google.com/search?q=https://github.com/Ethanscharlie/programming-project-4-capstone/commit/dfc172a) |
+| Build Simulation Runner for batch execution | Ben | April 28 | **IN PROGRESS** |
+| Perform Comparative Data Analysis of strategies | Alejandro | May 1 | TO DO |
+| Write 3–6 Page Formal Analysis Report | Alejandro | May 2 | TO DO |
+| Record team screencast video | Team | May 2 | TO DO |
+| Package .zip and submit final files | Alejandro | May 3 | TO DO |
 
-## 6․ Verification Plan
+## 6․ Checkpoint Artifacts (Located in /docs)
 
-To ensure our program works‚ we will do:
-* **Status:** Board and CardDeck parsing verified via `Simulator reading from file` commit.
-* Unit test "Go To Jail" and Chance card movement redirection.
-* Verify the `Square` class accurately tracks `landingCount`.
-* Compare `ImmediateExit` vs `TryForDoubles` results to identify convergence at $n=1M$.
-* Validate top-landed squares (e.g. Illinois Avenue) against known Monopoly stats.
-* Ensure `Simulator.simulate()` returns the correct `array[Square]` for data processing.
+  * **[proj\_4\_design-notes.md](https://www.google.com/search?q=https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/docs/proj_4_design-notes.md)**: Details logic assumptions and Square state tracking.
+  * **[proj\_4\_pseudocode.md](https://www.google.com/search?q=https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/docs/proj_4_pseudocode.md)**: High-level algorithm for the core movement loop.
 
-## 7․ Risks and Plan to Handle Them
+## 7․ Verification Plan
+
+To ensure our program works, we will do:
+
+  * **Status:** Board and CardDeck parsing verified via `Simulator reading from file` commit.
+  * Unit test "Go To Jail" and Chance card movement redirection.
+  * Verify the `Square` class accurately tracks `landingCount`.
+  * Compare `ImmediateExit` vs `TryForDoubles` results to identify convergence at $n=1M$.
+  * Validate top-landed squares (e.g. Illinois Avenue) against known Monopoly stats.
+  * Ensure `Simulator.simulate()` returns the correct `array[Square]` for data processing.
+
+## 8․ Risks and Plan to Handle Them
 
 **Simulation Runtime**
 Running 80 datasets at 1 million turns each may be intensive. We will optimize the engine for speed and start batch runs early to avoid last-minute delays.
@@ -78,4 +88,4 @@ Running 80 datasets at 1 million turns each may be intensive. We will optimize t
 The 3–6 page professional report requires deep analysis. Alejandro will begin drafting the report structure and data visualizations as soon as the first simulations complete.
 
 **Technical Complexity**
-Monopoly movement involves many edge cases. We will use the UML diagrams to strictly define movement priority (Dice -> Square -> Card -> Result) to avoid logic errors.
+Monopoly movement involves many edge cases. We will use the UML diagrams to strictly define movement priority (Dice -\> Square -\> Card -\> Result) to avoid logic errors.
