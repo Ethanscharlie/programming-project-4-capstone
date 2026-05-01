@@ -4,8 +4,8 @@
 
 ## 1․ Project Information
 
-  * **Course / Term:** CS 2430-502 - Spring 2026
-  * **Project:** Programming Project 4 - Capstone (PLO-CS-6)
+  * **Course / Term:** CS 2430-502 – Spring 2026
+  * **Project:** Programming Project 4 – Capstone (PLO-CS-6)
   * **Team Name:** AEB
   * **Start Date:** April 20, 2026
   * **Due Date:** May 3, 2026
@@ -52,11 +52,11 @@
 
 | Task | Owner | Due Date | Status / Evidence |
 |:---|:---|:---|:---|
-| Initialize /docs and Proj\_4\_plan.md | Alejandro | April 20 | **DONE** - [Commit cdbf911](https://www.google.com/search?q=https://github.com/Ethanscharlie/programming-project-4-capstone/commit/cdbf911) |
-| Implement Board and CardDeck parsing from board.txt | Ethan | April 24 | **DONE** - [Commit a083f21](https://www.google.com/search?q=https://github.com/Ethanscharlie/programming-project-4-capstone/commit/a083f21) |
-| Implement `Simulator` and `JailStrategy` enum logic | Ethan | April 26 | **DONE** - [Commit ffa24f4](https://www.google.com/search?q=https://github.com/Ethanscharlie/programming-project-4-capstone/commit/ffa24f4) |
-| Finalize Checkpoint Artifacts (UML/Design) | Ethan | April 26 | **DONE** - [Commit f2d59c1](https://www.google.com/search?q=https://github.com/Ethanscharlie/programming-project-4-capstone/commit/f2d59c1) |
-| Code Strategy A (ImmediateExit) and B (TryForDoubles) | Ethan | April 27 | **DONE** - [Commit dfc172a](https://www.google.com/search?q=https://github.com/Ethanscharlie/programming-project-4-capstone/commit/dfc172a) |
+| Initialize /docs and Proj\_4\_plan.md | Alejandro | April 20 | **DONE** - [Commit cdbf911](https://github.com/Ethanscharlie/programming-project-4-capstone/commit/cdbf911) |
+| Implement Board and CardDeck parsing | Ethan | April 24 | **DONE** - [Commit a083f21](https://github.com/Ethanscharlie/programming-project-4-capstone/commit/a083f21) |
+| Implement `Simulator` and `JailStrategy` logic | Ethan | April 26 | **DONE** - [Commit ffa24f4](https://www.google.com/search?q=https://github.com/Ethanscharlie/programming-project-4-capstone/commit/ffa24f4) |
+| Finalize Checkpoint Artifacts (UML/Design) | Ethan | April 26 | **DONE** - [Commit f2d59c1](https://github.com/Ethanscharlie/programming-project-4-capstone/commit/f2d59c1) |
+| Code Strategy A (ImmediateExit) and B (TryForDoubles) | Ethan | April 27 | **DONE** - [Commit dfc172a](https://github.com/Ethanscharlie/programming-project-4-capstone/commit/dfc172a) |
 | Build Simulation Runner for batch execution | Ben | April 28 | **IN PROGRESS** |
 | Perform Comparative Data Analysis of strategies | Alejandro | May 1 | TO DO |
 | Write 3–6 Page Formal Analysis Report | Alejandro | May 2 | TO DO |
