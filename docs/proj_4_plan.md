@@ -1,6 +1,6 @@
 # Project Plan: Monopoly Movement Simulator
 
-**Plan Last Updated:** April 30, 2026
+**Plan Last Updated:** May 2, 2026
 
 ## 1․ Project Information
 
@@ -45,7 +45,7 @@
 | Repository Setup     | April 20    | Repo documentation initialized with Plan and Contributions    | **DONE** |
 | Checkpoint           | April 26    | /docs folder updated with UML and technical design artifacts  | **DONE** |
 | Core Engine Complete | April 28    | All movement logic and Jail Strategies A & B implemented      | **DONE** |
-| Data Collection      | April 30    | Final simulations run at $n=1M$ with exported datasets        | **IN PROGRESS** |
+| Data Collection      | April 30    | Final simulations run at $n=1M$ with exported datasets        | **DONE** |
 | Final Submission     | May 3       | All materials finalized and submitted via Canvas              | UPCOMING |
 
 ## 5․ Task List
@@ -57,7 +57,9 @@
 | Implement `Simulator` and `JailStrategy` logic | Ethan | April 26 | **DONE** - [Commit ffa24f4](https://www.google.com/search?q=https://github.com/Ethanscharlie/programming-project-4-capstone/commit/ffa24f4) |
 | Finalize Checkpoint Artifacts (UML/Design) | Ethan | April 26 | **DONE** - [Commit f2d59c1](https://github.com/Ethanscharlie/programming-project-4-capstone/commit/f2d59c1) |
 | Code Strategy A (ImmediateExit) and B (TryForDoubles) | Ethan | April 27 | **DONE** - [Commit dfc172a](https://github.com/Ethanscharlie/programming-project-4-capstone/commit/dfc172a) |
-| Build Simulation Runner for batch execution | Ben | April 28 | **IN PROGRESS** |
+| Build Simulation Runner for batch execution | Ben | April 28 | **DONE** - `src/main/java/io/github/ethanscharlie/Main.java` |
+| Generate 80 required datasets and summary artifacts | Ben | May 1 | **DONE** - `output/dataset_manifest.txt` |
+| Create JUnit verification suite and document failures | Ben | May 2 | **DONE** - `src/test/java/io/github/ethanscharlie/SimluatorTest.java` and `docs/verification_report.md` |
 | Perform Comparative Data Analysis of strategies | Alejandro | May 1 | TO DO |
 | Write 3–6 Page Formal Analysis Report | Alejandro | May 2 | TO DO |
 | Record team screencast video | Team | May 2 | TO DO |
@@ -72,12 +74,12 @@
 
 To ensure our program works, we will do:
 
-  * **Status:** Board and CardDeck parsing verified via `Simulator reading from file` commit.
-  * Unit test "Go To Jail" and Chance card movement redirection.
-  * Verify the `Square` class accurately tracks `landingCount`.
-  * Compare `ImmediateExit` vs `TryForDoubles` results to identify convergence at $n=1M$.
-  * Validate top-landed squares (e.g. Illinois Avenue) against known Monopoly stats.
-  * Ensure `Simulator.simulate()` returns the correct `array[Square]` for data processing.
+  * **Completed:** Batch runner produces the 80 required datasets plus summary artifacts.
+  * **Completed:** JUnit tests cover board loading, wrap-around movement, dice bounds, jail redirect behavior, immediate-exit jail behavior, try-for-doubles jail behavior, and the three-doubles rule.
+  * **Completed:** Verified that `Simulator.simulate()` returns board data suitable for post-processing.
+  * **Completed:** Compared `ImmediateExit` vs `TryForDoubles` outputs in the generated summary tables at $n=1M$.
+  * **Open issue found:** Current simulator fails several jail-related verification tests.
+  * **Open requirement gap:** Chance / Community Chest deck behavior and Get Out of Jail Free card reuse are not implemented in the current engine, so those assignment requirements remain unverified.
 
 ## 8․ Risks and Plan to Handle Them
 
