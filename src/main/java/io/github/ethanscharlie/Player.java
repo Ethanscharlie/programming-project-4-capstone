@@ -59,6 +59,10 @@ public class Player {
         }
     }
 
+    public void goToLocation(int location) {
+        this.location = location;
+    }
+
     private void goToJail() {
         location = board.getJailLocation();
         inJail = true;

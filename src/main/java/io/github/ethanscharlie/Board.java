@@ -28,4 +28,13 @@ public class Board {
     public Square getSquareAtLocation(int location) { return squares[location]; }
 
     public int getJailLocation() { return jailLocation; }
+
+    public int getLocationOfSquareWithName(String name) throws Exception {
+        var i = 0;
+        for (var square : squares) {
+            if (square.name.equalsIgnoreCase(name)) return i;
+        }
+
+        throw new Exception(String.format("Couldn't find square with name %s", name));
+    }
 }
