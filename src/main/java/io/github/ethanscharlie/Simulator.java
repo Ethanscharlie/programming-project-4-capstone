@@ -11,7 +11,7 @@ public class Simulator {
     /////////////// TESTING //////////////////
 
     static void main() throws Exception {
-        var board = simulate(1000, JailStrategy.ImmediateExit);
+        var board = simulate(10000, JailStrategy.ImmediateExit);
         for (int i = 0; i < board.getAmountOfSquares(); i ++) {
             var square = board.getSquareAtLocation(i);
             System.out.printf("%s: %d%n", square.name, square.landingCount);

@@ -14,7 +14,7 @@ public class Player {
         this.jailStrategy = jailStrategy;
     }
 
-    public void takeTurn() {
+    public void takeTurn() throws Exception {
         var canTakeAnotherTurn = false;
 
         var dice1 = rollDice();
@@ -40,13 +40,13 @@ public class Player {
         }
     }
 
-    public void move(int steps) {
+    public void move(int steps) throws Exception {
         for (int step = 0; step < steps; step ++) location ++;
         if (location >= board.getAmountOfSquares()) location -= board.getAmountOfSquares();
         onSquareLanding();
     }
 
-    public void moveBack(int steps) {
+    public void moveBack(int steps) throws Exception {
         for (int step = 0; step < steps; step ++) location --;
         if (location < 0) location = board.getAmountOfSquares() + location;
         onSquareLanding();
@@ -58,17 +58,30 @@ public class Player {
 
     public void moveToNearest(Square.SquareType squareType) throws Exception {
         for (int i = location; i < board.getAmountOfSquares(); i ++) {
-            if (board.getSquareAtLocation(i).type == squareType) location = i;
+            if (board.getSquareAtLocation(i).type == squareType)  {
+                location = i;
+                return;
+            }
         }
 
-        throw new Exception("Square with type couldn't be found.");
+        // If behind
+        for (int i = 0; i < location; i ++) {
+            if (board.getSquareAtLocation(i).type == squareType) {
+                location = i;
+                return;
+            }
+        }
+
+        throw new Exception("Square with type couldn't be found. " + squareType.toString());
     }
 
-    private void onSquareLanding() {
+    private void onSquareLanding() throws Exception {
         var square = board.getSquareAtLocation(location);
         square.landingCount ++;
         switch (square.type) {
             case GoToJail -> goToJail();
+            case Chest -> ChestCard.getRandom().apply(this, board);
+            case Chance -> ChanceCard.getRandom().apply(this, board);
             default -> {}
         }
     }

@@ -1,5 +1,7 @@
 package io.github.ethanscharlie;
 
+import java.util.Random;
+
 public enum ChanceCard {
     AdvanceToBoardwalk {
         @Override
@@ -32,7 +34,7 @@ public enum ChanceCard {
     AdvanceToNearestRailroad {
         @Override
         public void apply(Player player, Board board) throws Exception {
-            player.moveToNearest(Square.SquareType.Jail);
+            player.moveToNearest(Square.SquareType.Railroad);
         }
     },
 
@@ -52,7 +54,7 @@ public enum ChanceCard {
 
     GoBack3Spaces {
         @Override
-        public void apply(Player player, Board board) {
+        public void apply(Player player, Board board) throws Exception {
             player.moveBack(3);
         }
     },
@@ -76,4 +78,11 @@ public enum ChanceCard {
     BuildingLoanMatures;
 
     public void apply(Player player, Board board) throws Exception {}
+
+    private static final ChanceCard[] VALUES = values();
+    private static final Random RANDOM = new Random();
+
+    public static ChanceCard getRandom() {
+        return VALUES[RANDOM.nextInt(VALUES.length)];
+    }
 }

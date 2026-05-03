@@ -1,5 +1,7 @@
 package io.github.ethanscharlie;
 
+import java.util.Random;
+
 public enum ChestCard {
     AdvanceToGo {
         @Override
@@ -36,4 +38,11 @@ public enum ChestCard {
     BankErrorInYourFavor;
 
     public void apply(Player player, Board board) throws Exception {}
+
+    private static final ChestCard[] VALUES = values();
+    private static final Random RANDOM = new Random();
+
+    public static ChestCard getRandom() {
+        return VALUES[RANDOM.nextInt(VALUES.length)];
+    }
 }
