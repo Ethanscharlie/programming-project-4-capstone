@@ -7,6 +7,7 @@ public class Player {
     int location = 0;
     int consecutiveDoubles = 0;
     int getOutOfJailCards = 0;
+    int getOutOfJailAttempts = 0;
     boolean inJail = false;
 
     public Player(Board board, JailStrategy jailStrategy) {
@@ -86,11 +87,37 @@ public class Player {
         }
     }
 
-    private void attemptToLeaveJail() {
-        inJail = false;
+    private void attemptToLeaveJail() throws Exception {
         switch (jailStrategy) {
-            case ImmediateExit -> {}
-            case TryForDoubles -> {}
+            case ImmediateExit -> {
+                if (getOutOfJailCards > 0) {
+                    getOutOfJailCards --;
+                    inJail = false;
+                    takeTurn();
+                }
+                else {
+                    inJail = false;
+                    takeTurn();
+                }
+            }
+
+            case TryForDoubles -> {
+                if (getOutOfJailCards > 0) {
+                    getOutOfJailCards --;
+                    inJail = false;
+                    takeTurn();
+                }
+                else if (getOutOfJailAttempts < 3){
+                    var dice1 = rollDice();
+                    var dice2 = rollDice();
+                    if (dice1 == dice2) move(dice1 + dice2);
+                    inJail = false;
+                }
+                else {
+                    inJail = false;
+                    takeTurn();
+                }
+            }
         }
     }
 
