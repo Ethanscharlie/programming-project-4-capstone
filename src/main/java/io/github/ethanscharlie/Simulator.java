@@ -1,6 +1,13 @@
 package io.github.ethanscharlie;
 
 public class Simulator {
+    /**
+     * Runs a full simulation of monopoly.
+     * @param turns the total amount of turns to make the player take during the simulation.
+     * @param jailStrategy the jail exit strategy to use.
+     * @return a Board object containing all the needed data for the report.
+     * @throws Exception can throw if a location not on the board is tried to be accessed.
+     */
     public static Board simulate(int turns, JailStrategy jailStrategy) throws Exception {
         var board = new Board();
         var player = new Player(board, jailStrategy);
