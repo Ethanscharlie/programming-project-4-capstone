@@ -1,0 +1,45 @@
+strategy,TryForDoubles
+run,8
+turns,10000
+total_landings_recorded,11962
+index,square,count,percentage
+0,GO,300,0.03000000
+1,Mediterranean Avenue,265,0.02650000
+2,Community Chest,299,0.02990000
+3,Baltic Avenue,304,0.03040000
+4,Income Tax,313,0.03130000
+5,Reading Railroad,281,0.02810000
+6,Oriental Avenue,354,0.03540000
+7,Chance,334,0.03340000
+8,Vermont Avenue,273,0.02730000
+9,Connecticut Avenue,347,0.03470000
+10,In Jail (Just Visiting),297,0.02970000
+11,St. Charles Place,302,0.03020000
+12,Electric Company,306,0.03060000
+13,States Avenue,329,0.03290000
+14,Virginia Avenue,294,0.02940000
+15,Pennsylvania Railroad,315,0.03150000
+16,St. James Place,277,0.02770000
+17,Community Chest,308,0.03080000
+18,Tennessee Avenue,286,0.02860000
+19,New York Avenue,342,0.03420000
+20,Free Parking,306,0.03060000
+21,Kentucky Avenue,287,0.02870000
+22,Chance,318,0.03180000
+23,Indiana Avenue,291,0.02910000
+24,Illinois Avenue,315,0.03150000
+25,B&O Railroad,289,0.02890000
+26,Atlantic Avenue,294,0.02940000
+27,Ventnor Avenue,279,0.02790000
+28,Water Works,284,0.02840000
+29,Marvin Gardens,228,0.02280000
+30,Go to Jail,287,0.02870000
+31,Pacific Avenue,294,0.02940000
+32,North Carolina Avenue,309,0.03090000
+33,Community Chest,299,0.02990000
+34,Pennsylvania Avenue,306,0.03060000
+35,Short Line Railroad,282,0.02820000
+36,Chance,285,0.02850000
+37,Park Place,328,0.03280000
+38,Luxury Tax,280,0.02800000
+39,Boardwalk,275,0.02750000
