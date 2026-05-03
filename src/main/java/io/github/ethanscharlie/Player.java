@@ -6,6 +6,7 @@ public class Player {
     JailStrategy jailStrategy;
     int location = 0;
     int consecutiveDoubles = 0;
+    int getOutOfJailCards = 0;
     boolean inJail = false;
 
     public Player(Board board, JailStrategy jailStrategy) {
@@ -39,10 +40,31 @@ public class Player {
         }
     }
 
-    private void move(int steps) {
+    public void move(int steps) {
         for (int step = 0; step < steps; step ++) location ++;
         if (location >= board.getAmountOfSquares()) location -= board.getAmountOfSquares();
+        onSquareLanding();
+    }
 
+    public void moveBack(int steps) {
+        for (int step = 0; step < steps; step ++) location --;
+        if (location < 0) location = board.getAmountOfSquares() + location;
+        onSquareLanding();
+    }
+
+    public void addGetOutOfJailFreeCard() {
+        getOutOfJailCards ++;
+    }
+
+    public void moveToNearest(Square.SquareType squareType) throws Exception {
+        for (int i = location; i < board.getAmountOfSquares(); i ++) {
+            if (board.getSquareAtLocation(i).type == squareType) location = i;
+        }
+
+        throw new Exception("Square with type couldn't be found.");
+    }
+
+    private void onSquareLanding() {
         var square = board.getSquareAtLocation(location);
         square.landingCount ++;
         switch (square.type) {
