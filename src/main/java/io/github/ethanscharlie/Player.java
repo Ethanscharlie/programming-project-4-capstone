@@ -110,10 +110,14 @@ public class Player {
                 else if (getOutOfJailAttempts < 3){
                     var dice1 = rollDice();
                     var dice2 = rollDice();
-                    if (dice1 == dice2) move(dice1 + dice2);
-                    inJail = false;
+                    if (dice1 == dice2) {
+                        getOutOfJailAttempts = 0;
+                        move(dice1 + dice2);
+                        inJail = false;
+                    }
                 }
                 else {
+                    getOutOfJailAttempts = 0;
                     inJail = false;
                     takeTurn();
                 }
