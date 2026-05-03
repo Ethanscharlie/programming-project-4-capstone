@@ -61,6 +61,7 @@ public class Player {
         for (int i = location; i < board.getAmountOfSquares(); i ++) {
             if (board.getSquareAtLocation(i).type == squareType)  {
                 location = i;
+                onSquareLanding();
                 return;
             }
         }
@@ -69,6 +70,7 @@ public class Player {
         for (int i = 0; i < location; i ++) {
             if (board.getSquareAtLocation(i).type == squareType) {
                 location = i;
+                onSquareLanding();
                 return;
             }
         }
@@ -110,6 +112,8 @@ public class Player {
                 else if (getOutOfJailAttempts < 3){
                     var dice1 = rollDice();
                     var dice2 = rollDice();
+                    getOutOfJailAttempts ++;
+
                     if (dice1 == dice2) {
                         getOutOfJailAttempts = 0;
                         move(dice1 + dice2);
