@@ -1,6 +1,6 @@
 # Project Plan: Monopoly Movement Simulator
 
-**Plan Last Updated:** May 2, 2026
+**Plan Last Updated:** May 3, 2026
 
 ## 1․ Project Information
 
@@ -40,7 +40,7 @@
 | Checkpoint | April 26 | /docs folder updated with UML and technical design artifacts | **DONE** |
 | Core Engine Complete | April 28 | All movement logic and Jail Strategies A & B implemented | **DONE** |
 | Data Collection | April 30 | Final simulations run at $n=1M$ with exported datasets | **DONE** |
-| Final Submission | May 3 | All materials finalized and submitted via Canvas | UPCOMING |
+| Final Submission | May 3 | All materials finalized and submitted via Canvas | **DONE** |
 
 ## 5․ Task List
 
@@ -52,12 +52,12 @@
 | Finalize Checkpoint Artifacts (UML/Design) | Ethan | April 26 | **DONE** - [Commit f2d59c1](https://github.com/Ethanscharlie/programming-project-4-capstone/commit/f2d59c1) |
 | Code Strategy A and B | Ethan | April 27 | **DONE** - [Commit dfc172a](https://github.com/Ethanscharlie/programming-project-4-capstone/commit/dfc172a) |
 | Build Simulation Runner | Ben | April 28 | **DONE** - [Main.java](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/src/main/java/io/github/ethanscharlie/Main.java) |
-| Generate 80 required datasets | Ben | May 1 | **DONE** - [Main.java Logic](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/src/main/java/io/github/ethanscharlie/Main.java) |
-| Create JUnit suite and document failures | Ben | May 2 | **DONE** - [verification_report.md](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/docs/verification_report.md) |
-| Comparative Data Analysis | Alejandro | May 1 | TO DO |
-| Write Formal Analysis Report | Alejandro | May 2 | TO DO |
-| Record team screencast video | Team | May 2 | TO DO |
-| Package .zip and submit final files | Alejandro | May 3 | TO DO |
+| Generate 80 required datasets | Ben | May 1 | **DONE** - [Dataset Manifest](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/output/dataset_manifest.txt) |
+| Create JUnit suite and document failures | Ben | May 2 | **DONE** - [pom.xml](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/pom.xml) |
+| Comparative Data Analysis | Alejandro | May 1 | **DONE** - Included in Analysis Report |
+| Write Formal Analysis Report | Alejandro | May 2 | **DONE** - [Analysis_Report.pdf](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/docs/Analysis_Report.pdf) |
+| Record team screencast video | Team | May 2 | **DONE** - Link provided in Canvas submission |
+| Package .zip and submit final files | Alejandro | May 3 | **DONE** - [cs2430_AEB_p4.zip](https://github.com/Ethanscharlie/programming-project-4-capstone/) |
 
 ## 6․ Checkpoint Artifacts (Located in /docs)
 
@@ -66,20 +66,7 @@
 
 ## 7․ Verification Plan
 
-To ensure our program works, we will do:
-
-* **Completed:** [Main.java](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/src/main/java/io/github/ethanscharlie/Main.java) produces the 80 required datasets plus summary artifacts.
+* **Completed:** [Main.java](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/src/main/java/io/github/ethanscharlie/Main.java) produces the 80 required datasets.
 * **Completed:** Verified that `Simulator.simulate()` returns board data suitable for post-processing.
-* **Completed:** Compared `ImmediateExit` vs `TryForDoubles` outputs in the generated summary tables at $n=1M$.
-* **Open issue found:** Current simulator fails several jail-related verification tests, documented in [verification_report.md](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/docs/verification_report.md).
-
-## 8․ Risks and Plan to Handle Them
-
-**Simulation Runtime**
-Running 80 datasets at 1 million turns each may be intensive. We will optimize the engine for speed and start batch runs early to avoid last-minute delays.
-
-**Report Requirements**
-The 3–6 page professional report requires deep analysis. Alejandro will begin drafting the report structure and data visualizations as soon as the first simulations complete.
-
-**Technical Complexity**
-Monopoly movement involves many edge cases. We will use the UML diagrams to strictly define movement priority (Dice -> Square -> Card -> Result) to avoid logic errors.
+* **Completed:** Compared `ImmediateExit` vs `TryForDoubles` outputs in summary tables at $n=1M$.
+* **Final Check:** All files cross-referenced in [CONTRIBUTIONS.md](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/docs/CONTRIBUTIONS.md).
