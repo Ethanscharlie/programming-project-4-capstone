@@ -3,37 +3,49 @@
 **Project:** Programming Project 4 - Monopoly Movement Simulator  
 **Team Name:** AEB
 
+---
+
 ## Role Assignments
 As required by the assignment, team roles were rotated and recorded in the project plan.
 
-- **Communications Lead:** Alejandro Pasillas
-- **Implementation Lead:** Ethan Hadley
-- **Verification Lead:** Ben Paul
+* **Communications Lead:** [Alejandro Pasillas](https://github.com/apasillas07)
+* **Implementation Lead:** [Ethan Hadley](https://github.com/Ethanscharlie)
+* **Verification Lead:** [Ben Paul](https://github.com/Ben1078)
+
+---
 
 ## Individual Contributions & Evidence
 
-### [Alejandro Pasillas](https://github.com/apasillas07) (GitHub: apasillas07)
-**Role:** Communications Lead
+### Alejandro Pasillas
+**Role:** Communications Lead  
+**Responsibilities:** Managed the `/docs` folder, synthesized simulation data into the formal analysis report, maintained the `README.md`, and coordinated the final team screencast.
 
-- **Responsibilities:** Managed the `/docs` folder, coordinated report assembly, and kept planning artifacts aligned with project milestones.
-- **Evidence Pointers:**
-  - [docs/proj_4_plan.md](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/docs/proj_4_plan.md)
-  - [docs/proj_4_design-notes.md](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/docs/proj_4_design-notes.md)
-  - [docs/proj_4_pseudocode.md](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/docs/proj_4_pseudocode.md)
+**Evidence Pointers:**
+* [README.md](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/README.md)
+* [docs/proj_4_plan.md](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/docs/proj_4_plan.md)
+* [docs/proj_4_design-notes.md](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/docs/proj_4_design-notes.md)
+* [docs/proj_4_pseudocode.md](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/docs/proj_4_pseudocode.md)
+* [docs/CONTRIBUTIONS.md](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/docs/CONTRIBUTIONS.md)
 
-### [Ethan Hadley](https://github.com/Ethanscharlie) (GitHub: Ethanscharlie)
-**Role:** Implementation Lead
+---
 
-- **Responsibilities:** Built the current simulation engine, board loading logic, player state, movement flow, and jail-handling scaffolding.
-- **Evidence Pointers:**
-  - [src/main/java/io/github/ethanscharlie/Simulator.java](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/src/main/java/io/github/ethanscharlie/Simulator.java)
-  - [src/main/resources/board.txt](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/src/main/resources/board.txt)
+### Ethan Hadley
+**Role:** Implementation Lead  
+**Responsibilities:** Built the core simulation engine, including board state management, random movement logic, and dual-strategy jail handling.
 
-### [Ben Paul](https://github.com/Ben1078) (GitHub: Ben1078)
-**Role:** Verification Lead
+**Evidence Pointers:**
+* [src/main/java/io/github/ethanscharlie/Simulator.java](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/src/main/java/io/github/ethanscharlie/Simulator.java)
+* [src/main/resources/board.txt](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/src/main/resources/board.txt)
+* [src/test/java/io/github/ethanscharlie/SimluatorTest.java](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/src/test/java/io/github/ethanscharlie/SimluatorTest.java)
 
-- **Responsibilities:** Built the batch simulation runner, generated the required 80 datasets, created the JUnit verification suite, and documented verification findings for unresolved rule gaps.
-- **Evidence Pointers:**
-  - **Batch runner:** [src/main/java/io/github/ethanscharlie/Main.java](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/src/main/java/io/github/ethanscharlie/Main.java)
-  - **Verification test suite:** [pom.xml](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/pom.xml)
-  - **Verification findings:** [docs/verification_report.md](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/docs/verification_report.md)
+---
+
+### Ben Paul
+**Role:** Verification Lead  
+**Responsibilities:** Automated the verification workflow by building a batch runner for 80 independent simulations and validating logic stability via JUnit.
+
+**Evidence Pointers:**
+* [src/main/java/io/github/ethanscharlie/Main.java](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/src/main/java/io/github/ethanscharlie/Main.java)
+* [pom.xml](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/pom.xml)
+* [output/dataset_manifest.txt](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/output/dataset_manifest.txt)
+* [.gitignore](https://github.com/Ethanscharlie/programming-project-4-capstone/blob/main/.gitignore)
